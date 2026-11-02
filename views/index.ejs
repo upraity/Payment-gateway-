@@ -1,0 +1,5 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Resources | SabkaCode</title><link rel="stylesheet" href="/style.css"></head>
+<body><header class="top"><a class="brand" href="/">SabkaCode</a><a href="/admin/login">Admin</a></header><main class="container"><section class="hero"><span class="eyebrow">LEARN • PRACTICE • GROW</span><h1>Useful resources for your learning</h1><p>Select a resource to continue to secure UPI payment.</p></section>
+<div class="products"><% products.forEach(p => { %><article class="product card"><div><span class="tag">DIGITAL RESOURCE</span><h2><%= p.name %></h2><p><%= p.description %></p></div><div class="buy-row"><strong>₹<%= money(p.amount_paise) %></strong><a class="btn" href="/checkout/<%= p.id %>">Buy now</a></div></article><% }) %></div>
+<% if (!products.length) { %><p>No resources are currently available.</p><% } %></main><footer>© <%= new Date().getFullYear() %> SabkaCode</footer></body></html>
